@@ -13,7 +13,7 @@ const thoughtController = {
             })
             .then(dbThoughtData => {
                 if(!dbThoughtData) {
-                    res.status(404).json({ message: 'No user thought found with this id' });
+                    res.status(404).json({ message: 'No thought found with this id' });
                     return;
                 }
                 res.json(dbThoughtData);
@@ -28,14 +28,14 @@ const thoughtController = {
         )
         .then(dbThoughtData => {
             if(!dbThoughtData) {
-                res.status(404).json({ message: 'No Thought found with this id' });
+                res.status(404).json({ message: 'No thought found with this id' });
                 return;
             }
             res.json(dbThoughtData)
         })
         .catch(err => res.json(err))
     },
-    // Get all Thoughts
+    // get all Thoughts
     getAllThought(req, res) {
         Thought.find({})
             .then(dbThoughtData => res.json(dbThoughtData))
@@ -55,7 +55,7 @@ const thoughtController = {
                 res.json(dbSingleThought)
             })
             .catch(err => {
-                res.status(400).json({ message: 'error trying to find a single thought' });
+                res.status(400).json({ message: 'Error trying to find a single thought' });
             });
     },
     // update a thought

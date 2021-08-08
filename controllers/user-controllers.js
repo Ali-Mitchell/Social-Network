@@ -11,7 +11,7 @@ const userController = {
             })
             .then(dbUserFindAll => res.json(dbUserFindAll))
             .catch(err => {
-                res.status(400).json(err, { message: 'something went wrong trying to find all users' });
+                res.status(400).json(err, { message: 'Something went wrong trying to find all users' });
             });
     },
     // get user by id
@@ -47,7 +47,7 @@ const userController = {
         )
         .then(dbAddFriendData => {
             if(!dbAddFriendData) {
-                res.status(404).json({ message: 'No user data to add a friend' });
+                res.status(404).json({ message: 'No data exits to add this friend' });
                 return;
             }
             res.json(dbAddFriendData)
@@ -75,7 +75,7 @@ const userController = {
         User.findOneAndDelete({ _id: params.id })
             .then(dbUserData => {
                 if(!dbUserData) {
-                    res.status(404).json({message: 'no user with that id'});
+                    res.status(404).json({message: 'No user with that id'});
                     return;
                 }
                 res.json(dbUserData)
