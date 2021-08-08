@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/Ali-Mitchell/Social-Network/issues"
   },
-  "homepage": "https://github.com/Ali-Mitchell/Social-Network#readme"
+  "homepage": "https://github.com/Ali-Mitchell/Social-Network#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5"
+  }
 }
